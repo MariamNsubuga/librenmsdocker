@@ -1,0 +1,2 @@
+docker exec librenms setup_database
+docker exec librenms create_admin
