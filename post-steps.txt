@@ -1,2 +1,13 @@
+For the DB server:
+docker exec -it mysql
+
+mysql -u root --password=letsgomets2019
+
+CREATE USER 'librenms'@'localhost' IDENTIFIED BY 'letsgomets2019';
+GRANT ALL PRIVILEGES ON * . * TO 'librenms'@'localhost';
+FLUSH PRIVILEGES;
+quit
+
+For the NMS server:
 docker exec librenms setup_database
 docker exec librenms create_admin
