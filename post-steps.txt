@@ -4,7 +4,7 @@ docker exec -it mysql bash
 mysql -u root --password=letsgomets2019
 
 CREATE USER 'librenms'@'%' IDENTIFIED BY 'letsgomets2019';
-GRANT ALL PRIVILEGES ON * . * TO 'librenms'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'librenms'@'%';
 FLUSH PRIVILEGES;
 quit
 
