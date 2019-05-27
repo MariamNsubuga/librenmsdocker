@@ -1,5 +1,5 @@
 For the DB server:
-docker exec -it mysql
+docker exec -it mysql bash
 
 mysql -u root --password=letsgomets2019
 
