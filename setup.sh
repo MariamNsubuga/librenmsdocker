@@ -13,5 +13,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo groupadd docker
 sudo usermod -aG docker foghorn
+sudo systemctl restart docker
 
 sudo chcon -Rt svirt_sandbox_file_t /home/foghorn/docker
