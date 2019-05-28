@@ -15,4 +15,7 @@ sudo groupadd docker
 sudo usermod -aG docker foghorn
 sudo systemctl restart docker
 
+sudo yum install ntpdate -y
+sudo ntpdate 1.ro.pool.ntp.org
+
 sudo chcon -Rt svirt_sandbox_file_t /home/foghorn/docker
