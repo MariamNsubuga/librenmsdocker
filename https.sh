@@ -1,7 +1,7 @@
 docker run \
 	-d \
 	-h librenms \
-	-p 80:80 \
+	--expose 80:80 \
 	-p 161:161 \
 	-p 162:162 \
 	-p 514:514 -p 514:514/udp \
@@ -19,3 +19,13 @@ docker run \
 	--name librenms \
 	--restart always \
 	jarischaefer/docker-librenms
+
+docker run \
+    -d \
+    --name nginx \
+    --link librenms \
+    -e UPSTREAM=librenms:80 \
+    -e SERVERNAME=stats.notaserver.net \
+    -p 80:80 \
+    -p 443:443 \
+    danieldent/nginx-ssl-proxy

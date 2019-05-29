@@ -18,4 +18,6 @@ sudo systemctl restart docker
 sudo yum install ntpdate -y
 sudo ntpdate 1.ro.pool.ntp.org
 
+#docker network create --driver bridge --subnet 172.30.0.0/16 securenet
+
 sudo chcon -Rt svirt_sandbox_file_t /home/foghorn/docker
