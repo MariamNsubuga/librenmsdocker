@@ -8,6 +8,9 @@ To use these scripts as-is, we assume that:
 2. Your username is "foghorn" (one line needs to be changed to fix this assumption)
 3. You want to store files to enable persistent storage of data in your home directory
 4. HTTP is fine for your security concerns. HTTPS is available (kinda) in the HTTPS script using an NGINX proxy but it doesn't work well and honestly I'm still figuring it out.
+5. You're OK using the existing IP address of your system and nothing is running on port 80 right now
+
+If you want to deploy this on a secondary IP address configure it on your system and the update the `-p ` commands in the docker run section of run.sh.
 
 Feel free to update these references in the code to point to the right locations. This is how I deploy it in my instance but does not need to match yours.
 
@@ -41,6 +44,10 @@ Sets up the containers and configures them for operation.
 
 A standalone run command for the LibreNMS container
 
-##db.sh
+## db.sh
 
 A standalone run command for the MySQL container
+
+## https.sh
+
+A work in progress container that uses an nginx proxy for HTTPS traffic
