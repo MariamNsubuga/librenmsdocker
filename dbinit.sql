@@ -1,14 +1,4 @@
-For the DB server:
-docker exec -it mysql bash
-
-mysql -u root --password=letsgomets2019
-
 CREATE DATABASE librenms CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER 'librenms'@'%' IDENTIFIED BY 'letsgomets2019';
 GRANT ALL PRIVILEGES ON * . * TO 'librenms'@'%';
 FLUSH PRIVILEGES;
-quit
-
-For the NMS server:
-docker exec librenms setup_database
-docker exec librenms create_admin
